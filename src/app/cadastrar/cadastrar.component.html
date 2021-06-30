@@ -8,31 +8,26 @@
                         <h1 class="font-weight-bold text-center mt-5 mb-3">Cadastro</h1>
 
                         <label for="nome" class="font-weight-bold">Nome</label>
-                        <input type="text" class="form-control mb-3 " name="nome" id="nome"
-                            placeholder="Insira seu nome">
-
-                        <label for="sobrenome" class="font-weight-bold">Sobrenome</label>
-                        <input type="text" class="form-control mb-3 " name="sobrenome" id="sobrenome"
-                            placeholder="Insira seu sobrenome">
+                        <input [(ngModel)] = 'user.nome' type="text" class="form-control mb-3 " name="nome" id="nome" placeholder="Insira seu nome">
 
                         <label for="usuario" class="font-weight-bold">Usuário</label>
-                        <input type="text" class="form-control mb-3" name="usuario" id="usuario"
+                        <input  [(ngModel)] = 'user.usuario' type="text" class="form-control mb-3" name="usuario" id="usuario"
                             placeholder="Insira o usuário">
 
                         <label for="foto" class="font-weight-bold">Link da Foto</label>
-                        <input type="text" class="form-control mb-3" name="foto" id="foto"
+                        <input [(ngModel)] = 'user.foto' type="text" class="form-control mb-3" name="foto" id="foto"
                             placeholder="Link da sua foto">
 
                         <label for="senha" class="font-weight-bold">Senha</label>
-                        <input type="password" class="form-control mb-3" name="senha" id="senha"
+                        <input (input)='confirmSenha($event)' type="password" class="form-control mb-3" name="senha" id="senha"
                             placeholder="Insira a senha">
 
                         <label for="senhaConf" class="font-weight-bold">Confirmar Senha</label>
-                        <input type="password" class="form-control mb-3" name="senhaConf" id="senhaConf"
+                        <input [(ngModel)] = 'user.senha' type="password" class="form-control mb-3" name="senhaConf" id="senhaConf"
                             placeholder="Insira a senha novamente">
 
                         <label for="tipo" class="font-weight-bold">Tipo de Usuário</label>
-                        <select class="form-control" name="tipo" id="tipo">
+                        <select class="form-control" name="tipo" id="tipo" (change) = 'tipoUser($event)'>
                             <option value="">Selecione um tipo de usuário</option>
                             <option value="normal">Padrão</option>
                             <option value="adm">Administrador</option>
@@ -44,7 +39,7 @@
                                 class="btn btn-outline-danger border-zero botao mx-4"
                                 routerLink = "/login">Cancelar</button>
                             <button type="submit"
-                                class="btn btn-outline-success border-zero botao mx-4">Cadastrar</button>
+                                class="btn btn-outline-success border-zero botao mx-4" (click) = 'cadastrar()'>Cadastrar</button>
                         </div>
 
                     </div>

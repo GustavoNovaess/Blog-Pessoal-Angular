@@ -1,4 +1,9 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment.prod';
+import { UserLogin } from '../model/UserLogin';
+import { AuthService } from '../service/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -7,9 +12,38 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  userLogin: UserLogin = new UserLogin()
 
-  ngOnInit(): void {
+  constructor(
+    private auth: AuthService,
+    private http: HttpClient,
+    private router: Router
+  ) { }
+
+  ngOnInit() {
+    window.scroll(0,0);
+  }
+
+  entrar() {
+    this.auth.entrar(this.userLogin).subscribe((resp: UserLogin) => {
+      this.userLogin = resp
+
+      environment.id = this.userLogin.id;
+      environment.token = this.userLogin.token;
+      environment.nome = this.userLogin.nome;
+      environment.foto = this.userLogin.foto;
+
+      console.log(environment.id)
+      console.log(environment.token)
+      console.log(environment.nome)
+      console.log(environment.foto)
+
+      this.router.navigate(['/inicio'])
+    }, erro => {
+      if(erro.status == 500) {
+        alert("Usuário ou senha estão incorretos")
+      } 
+    })
   }
 
 }
