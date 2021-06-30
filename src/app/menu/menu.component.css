@@ -22,3 +22,8 @@ a {
 .bg-black {
     background-color: black;
 }
+
+.imagem{
+    min-width: 50px;
+    min-height: 50px;
+}
