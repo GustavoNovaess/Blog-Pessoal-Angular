@@ -14,6 +14,7 @@ export class InicioComponent implements OnInit {
   ) { }
 
   ngOnInit(){
+    console.log(environment)
     if(environment.token == '') {
       this.router.navigate(['/login'])
       alert('Sua sessão expirou, faça o login novamente')

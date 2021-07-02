@@ -1,3 +1,4 @@
+import { HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
@@ -24,6 +25,10 @@ export class TemaComponent implements OnInit {
     if(environment.token == '') {
       alert('Sua sessão expirou, faça o login novamente')
       this.router.navigate(['/login'])
+    } else {
+      this.temaService.token = {
+        headers: new HttpHeaders().set('Authorization',environment.token)
+      }
     }
     this.findAllTema()
   }

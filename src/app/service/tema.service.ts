@@ -16,6 +16,8 @@ export class TemaService {
   }
 
   getAllTema(): Observable<Tema[]>{
+    
+    console.log(this.token)
     return this.http.get<Tema[]>("https://bggustavonovaes.herokuapp.com/tema",this.token)
   }
 
