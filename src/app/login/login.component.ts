@@ -21,9 +21,15 @@ export class LoginComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    console.log(environment)
     window.scroll(0,0);
   }
+  /*4
 
+Basic Z3VzdGF2by5saW1hQGhvdG1haWwuY29tOnNlbmhh
+Basic Z3VzdGF2by5saW1hQGhvdG1haWwuY29tOnNlbmhh
+
+Gustavo Novaes*/
   entrar() {
     this.auth.entrar(this.userLogin).subscribe((resp: UserLogin) => {
       this.userLogin = resp

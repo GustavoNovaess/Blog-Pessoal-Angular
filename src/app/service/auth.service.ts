@@ -8,6 +8,7 @@ import { Usuario } from '../model/Usuario';
 @Injectable({
   providedIn: 'root'
 })
+// "https://backendthiagofaccipieri.herokuapp.com/usuario/logar"
 export class AuthService {
 
   constructor(private http:HttpClient) { }
