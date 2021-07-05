@@ -1,0 +1,23 @@
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-center text-black">Atualizar Tema</h1>
+        </div>
+    </div>
+
+    <div class="row d-flex justify-content-center roboto">
+        <div class="col-md-6">
+
+            <div class="form-group">
+                <label for="descricao">Descrição do Tema</label>
+                <input [(ngModel)]='tema.descricao' type="text" class="form-control" name="descricao" id="descricao">
+            </div>
+
+        </div>
+    </div>
+    <div class="d-flex justify-content-center roboto">
+        <button type="button" class="btn btn-outline-danger mr-4 mb-3 mt-3" routerLink = "/tema">Cancelar</button>
+        <button type="button" class="btn btn-outline-info mb-3 mt-3" (click) = "atualizar()">Atualizar</button>
+    </div>
+</div>

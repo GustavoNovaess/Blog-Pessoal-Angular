@@ -1,3 +1,4 @@
+<!-- Container Central da Página com botão de cadastro -->
 <div class="container-fluid roboto">
 
     <div class="row bg-img">
@@ -16,16 +17,16 @@
                     </div>
                     <div class="d-flex justify-content-center">
                         <a class="btn btn-outline-light mb-2" (click) = "cadastrarTema()">Cadastrar</a>
-                        <a class="btn btn-outline-light mb-2" (click) = "findAllTema()">Temas</a>
                     </div>
                 </div>
             </div>
 
         </div>
     </div>
-
 </div>
+<!--/Container Central da Página com botão de cadastro -->
 
+<!-- Container de exibição de todos os temas -->
 <div class="container roboto">
 
     <div class="row mt-5">
@@ -46,16 +47,18 @@
                 </thead>
                 <tbody>
                     <tr *ngFor='let item of listaTemas'>
+                        <!-- Interpolação de dados -->
                         <th>{{item.id}}</th>
                         <td>{{item.descricao}}</td>
                         <td class = "d-flex justify-content-end">
-                            <button type="button" class="btn btn-outline-info mx-3">Editar</button>
-                            <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Apagar</button>
+                            <button type="button" class="btn btn-outline-info mx-3" 
+                            [routerLink] = "['/tema-edit', item.id]">Editar</button>
+                            <button type="button" class="btn btn-outline-danger" data-dismiss="modal" [routerLink] = "['/tema-delete',item.id]">Apagar</button>
                         </td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </div>
-
 </div>
+<!--/Container de exibição de todos os temas -->

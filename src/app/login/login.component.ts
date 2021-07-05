@@ -23,6 +23,11 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
     console.log(environment)
     window.scroll(0,0);
+    /* Fix do bug em que as componentes do inicio aparecem ao voltar para o login pelo navegador */
+    /*if(environment.token != '') {
+      alert("Sessão expirada")
+      this.auth.logado()
+    }*/
   }
   /*4
 
