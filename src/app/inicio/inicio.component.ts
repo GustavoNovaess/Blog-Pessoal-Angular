@@ -27,6 +27,9 @@ export class InicioComponent implements OnInit {
   user: Usuario = new Usuario()
   idUser = environment.id
 
+  key =  'date'
+  reverse = true
+
   constructor(
     private router: Router,
     private postagemService: PostagemService,
