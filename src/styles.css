@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+
+html {
+    scroll-behavior : smooth;
+}
+
+.roboto {
+    font-family: Roboto;
+}
+.fonteh1 {
+    font-size: 56pt;
+}
+
+.fonteh5 {
+    font-size: 18pt;
+}

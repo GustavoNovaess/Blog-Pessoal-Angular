@@ -1,0 +1,14 @@
+.botao {
+    width: 85px;
+    font-size: 12pt;
+}
+
+.bg-img {
+    background-image: url('https://i.imgur.com/3zJM1DY.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    filter: blur(20%);
+}
+

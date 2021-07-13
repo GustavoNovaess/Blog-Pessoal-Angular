@@ -1,0 +1,36 @@
+.bg-black {
+    background-color: black;
+}
+
+.bg-white {
+    background-color: white;
+}
+
+.font-roboto {
+    font-family: Roboto;
+}
+
+.social-network{
+    list-style: none;
+    padding: 0px;
+}
+
+.social-network li{
+    display: inline;
+    margin: 0;
+    padding: 10px;
+
+}
+
+.fab{
+    font-size: 35pt;
+    color: black;
+}
+
+.fa-linkedin:hover {
+    color: #0072b1;
+}
+
+.fa-github-square:hover {
+    color: #003f61;
+}

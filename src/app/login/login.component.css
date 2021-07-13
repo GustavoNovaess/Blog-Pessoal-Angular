@@ -1,0 +1,22 @@
+#img-bg{
+    background-image: url("../../assets/img/binaryfall.jpg");
+
+    min-height: 100vh;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.font-roboto {
+    font-family: Roboto;
+}
+
+.border-zero {
+    border-radius: 0%;
+}
+
+.botao {
+    width: 100px;
+    font-size: 13pt;
+}

@@ -1,0 +1,51 @@
+<div class="container my-4">
+
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-center text-black mb-4">Atualizar Usuário</h1>
+        </div>
+    </div>
+
+    <div class="row d-flex justify-content-center align-items-center">
+        <div class="col-10">
+            <div class="formgroup font-roboto">
+
+                <label for="nome" class="font-weight-bold">Nome</label>
+                <input [(ngModel)] = 'user.nome' type="text" class="form-control mb-3 " name="nome" id="nome" placeholder="Insira seu nome">
+
+                <label for="usuario" class="font-weight-bold">Usuário</label>
+                <input  [(ngModel)] = 'user.usuario' type="text" class="form-control mb-3" name="usuario" id="usuario"
+                    placeholder="Insira o usuário">
+
+                <label for="foto" class="font-weight-bold">Link da Foto</label>
+                <input [(ngModel)] = 'user.foto' type="text" class="form-control mb-3" name="foto" id="foto"
+                    placeholder="Link da sua foto">
+
+                <label for="senha" class="font-weight-bold">Senha</label>
+                <input (input)='confirmSenha($event)' type="password" class="form-control mb-3" name="senha" id="senha"
+                    placeholder="Insira a senha">
+
+                <label for="senhaConf" class="font-weight-bold">Confirmar Senha</label>
+                <input [(ngModel)] = 'user.senha' type="password" class="form-control mb-3" name="senhaConf" id="senhaConf"
+                    placeholder="Insira a senha novamente">
+
+                <label for="tipo" class="font-weight-bold">Tipo de Usuário</label>
+                <select class="form-control" name="tipo" id="tipo" (change) = 'tipoUser($event)'>
+                    <option value="">Selecione um tipo de usuário</option>
+                    <option value="normal">Padrão</option>
+                    <option value="adm">Administrador</option>
+                </select>
+
+
+                <div class="d-flex justify-content-center mt-4">
+                    <button type="submit"
+                        class="btn btn-outline-danger border-zero botao mx-5"
+                        routerLink = "/inicio">Cancelar</button>
+                    <button type="submit"
+                        class="btn btn-outline-info border-zero botao mx-5" (click) = 'atualizar()'>Atualizar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

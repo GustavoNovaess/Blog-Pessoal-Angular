@@ -1,0 +1,27 @@
+#img-bg {
+    background-image: url("../../assets/img/abstractpatterns.jpg");
+
+    min-height: 100vh;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.font-roboto {
+    font-family: Roboto;
+}
+
+.formulario {
+    width: 350px;
+}
+
+.border-zero {
+    border-radius: 0%;
+}
+
+.botao {
+    width: 100px;
+    font-size: 13pt;
+}
