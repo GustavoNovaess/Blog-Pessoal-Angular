@@ -75,6 +75,14 @@
     <!-- Todas Postagens -->
         <div class="tab-pane fade show active" id="postagens" role="tabpanel" aria-labelledby="nav-postagens-tab">
 
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <input type="text" class = "form-control" id = "titulo" placeholder="Pesquisar" [(ngModel)] = 'tituloPost' (keyup) = "findByTituloPostagem()">
+                    </div>
+                </div>
+            </div>
+
             <div class="card-columns">
 
                 <div class="card text-center" 
