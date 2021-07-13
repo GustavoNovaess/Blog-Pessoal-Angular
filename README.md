@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.5.
 
-##Documentation
+## Documentation
 
 Documentation of this project can be found here: https://gustavonovaess.github.io/doc-BlogPessoal/
 
